@@ -4,12 +4,22 @@ from pydantic import BaseModel
 import google.generativeai as genai
 import google.api_core.exceptions
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 
 # Initialize API key for Gemini
 genai.configure(api_key="AIzaSyCnCxtKRmRxp9DOQcDi0htWHtj19mCJjpY")  # Replace with secure storage method in production
 
 # FastAPI app instance
 app = FastAPI(title="MediBot AI Chat API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Request model for input validation
 class ChatRequest(BaseModel):
