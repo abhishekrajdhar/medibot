@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: medibot-api
+    env: docker
+    plan: free
+    region: oregon  # or frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyCnCxtKRmRxp9DOQcDi0htWHtj19mCJjpY
+    autoDeploy: true
