@@ -14,7 +14,7 @@ app = FastAPI(title="MediBot AI Chat API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["my-medic.vercel.app"],  
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
