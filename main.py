@@ -7,7 +7,7 @@ import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 
 # Initialize API key for Gemini
-genai.configure(api_key="AIzaSyCnCxtKRmRxp9DOQcDi0htWHtj19mCJjpY")  # Replace with secure storage method in production
+genai.configure(api_key="AIzaSyDYZ8phiEZhEw5tycZRByYLoJ6ZgVgDJlA")  # Replace with secure storage method in production
 
 # FastAPI app instance
 app = FastAPI(title="MediBot AI Chat API")
