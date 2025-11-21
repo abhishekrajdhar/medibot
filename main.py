@@ -49,7 +49,7 @@ async def chat_with_medical_ai(chat_request: ChatRequest):
         return {"response": "Please provide a valid medical question or query.", "disclaimer": ChatResponse.__fields__["disclaimer"].default}
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-pro-latest")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         # Insert the user message into the medical prompt context
         formatted_prompt = MEDICAL_CONTEXT_PROMPT.format(user_message=user_message)
         response = model.generate_content(formatted_prompt)
